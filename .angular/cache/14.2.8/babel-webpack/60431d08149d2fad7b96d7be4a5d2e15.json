@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const environment = {\n  production: true,\n  apiURL: \"https://comp229-005-backend.nn.r.appspot.com/\" // back end-- postman\n\n};","map":null,"metadata":{},"sourceType":"module"}

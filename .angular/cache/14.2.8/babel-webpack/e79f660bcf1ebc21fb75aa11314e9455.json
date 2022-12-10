@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Inventory {\n  constructor(_id, name, brand, category, quantity, price, description) {\n    this._id = _id;\n    this.name = name;\n    this.brand = brand;\n    this.category = category;\n    this.quantity = quantity;\n    this.price = price;\n    this.description = description;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}
