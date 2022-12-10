@@ -7,6 +7,9 @@
     
     <!-- Links -->
     <ul class="navbar-nav">
+
+      <!-- "Home" in Header -->
+
       <li class="nav-item">
         <!-- <% if (title == "Home") { %> -->
         <a class="nav-link" [class.active]="title == 'Home'" href="/">
@@ -16,24 +19,33 @@
             <i class="fas fa-home"></i> Home 
         </a>
       </li>
-      <li class="nav-item">
+
+      <!-- "Projects" in Header -->
+
+      <!-- <li class="nav-item">
         <!-- <% if (title == "Projects") { %> -->
             <!-- <a class="nav-link active" href="/projects"> -->
         <!-- <% } else { %> -->
-        <a class="nav-link" [class.active]="title == 'Projects'" href="/projects">
+        <!-- <a class="nav-link" [class.active]="title == 'Projects'" href="/projects">
         <!-- <% } %>             -->
-          <i class="fas fa-project-diagram"></i> Projects 
+          <!-- <i class="fas fa-project-diagram"></i> Projects 
         </a>
-      </li>
-      <li class="nav-item">
+      </li>  -->
+
+      <!-- "About" in Header -->
+
+      <!-- <li class="nav-item">
         <!-- <% if (title == "About") { %>
             <a class="nav-link active" href="/about">
         <% } else { %> -->
-        <a class="nav-link" [class.active]="title == 'About'" href="/about">
+        <!-- <a class="nav-link" [class.active]="title == 'About'" href="/about"> -->
         <!-- <% } %>             -->
-            <i class="fas fa-home"></i> About 
-        </a>
-      </li>
+            <!-- <i class="fas fa-home"></i> About  -->
+        <!-- </a> -->
+      <!-- </li> -->
+
+      <!-- "Inventory" in Header -->
+
       <li class="nav-item dropdown">
         <!-- <% if (title == "Inventory List" || title == "Add a new Item") { %> -->
         <a *ngIf="title == 'Inventory List' || title == 'Add a new Item'; else deactiveList"
@@ -64,15 +76,21 @@
           </li>
         </ul>
       </li>
-      <li class="nav-item">
+
+      <!-- "User" in Header-->
+
+      <!-- <li class="nav-item"> -->
         <!-- <% if (title == "Users") { %> -->
             <!-- <a class="nav-link active" href="/users"> -->
         <!-- <% } else { %> -->
-            <a class="nav-link" [class.active]="title == 'Users'" href="/users">
+            <!-- <a class="nav-link" [class.active]="title == 'Users'" href="/users"> -->
         <!-- <% } %>             -->
-            <i class="fas fa-user"></i> Users 
-        </a>
-      </li>
+            <!-- <i class="fas fa-user"></i> Users  -->
+        <!-- </a> -->
+      <!-- </li> -->
+
+      <!-- "Sign IN" or "Sign Out" in Header -->
+
       <li class="nav-item">  
         <!-- <% if (typeof userName == 'string' && userName) { %>
           <a class="nav-link" href="/users/signout" onclick="return confirm('Are you sure?')">Sign Out (<%= userName %>)</a>

@@ -5,8 +5,96 @@ Data: Dec 06, 2022 -->
 <!-- <% include partials/header.ejs %> -->
 <app-header [title]="title"></app-header>
 
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }} page</p>
+    <h1 id="title"><span style="color : #701028">AGILE</span> <span style="color: #009fe8;"> BUY</span></h1>
+
+    <p id="tagline">Everybody Deserves The Best</p>
+    <h3 id="subtitle">{{ title }}</h3>
+    <!-- <p>Welcome to {{ title }} page</p> -->
+
+    <br><br>
+
+    <div id="mission">
+      <span id="title" style="color : #701028">Meet Our</span> <span id="title" style="color: #009fe8;"> Team</span>
+      <br>
+    </div>
+    
+    <div id="team">
+      <div id="team1">
+      <img src="assets/logo.jpg" alt="logo" style="width:250px; height: 250px; float: left; margin-left:7%; border: black 3px solid; margin-top: 7%;">
+      <img src="assets/logo.jpg" alt="logo" style="width:250px; height: 250px; float: left;margin-left: 7%; border: black 3px solid; margin-top: 7%;">
+      <img src="assets/logo.jpg" alt="logo" style="width:250px; height: 250px; float: left;margin-left: 7%; border: black 3px solid; margin-top: 7%;">
+    </div>
+ 
+    <div id="teamName">
+      <p><span style="margin-right: 10%; margin-left: -30%;">Name : Meysam Mahdavikhansari </span> <span style="margin-left:-10% ;">Name : Rushi Rokad </span> <span>Name : Rushi Rokad</span></p>
+      <p></p>
+    </div>
+      <div id="team2">
+        <img src="assets/logo.jpg" alt="logo" style="width:250px; height: 250px; float: left; margin-left: 7%;border: black 3px solid; margin-top: 7%;">
+        <img src="assets/logo.jpg" alt="logo" style="width:250px; height: 250px; float: left; margin-left: 7%;border: black 3px solid; margin-top: 7%;">
+        <img src="assets/logo.jpg" alt="logo" style="width:250px; height: 250px; float: left;margin-left: 7%; border: black 3px solid; margin-top: 7%;">
+      </div>
+    </div>
+  
+
+    <br><br>
+
+    <div id="mission">
+      <span id="title" style="color : #701028">Our</span> <span id="title" style="color: #009fe8;"> Mission</span>
+      <br>
+    </div>
+
+    <p style="text-align: center; font-size: 20px; margin-top: 1%; line-height: 40px;">"Our Prime mission is to make sure that everybody is getting the best quality products <br> in all over the Canada."</p>
+
+  <style>
+    #title, #subtitle, #tagline {
+        text-align: center;
+        text-decoration: none;
+        font-style: normal;
+    }
+
+    #title, #subtitle{
+        margin-top: 2%;
+        font-weight: 700;
+    }
+
+    #tagline {
+        margin-top: -0.5%;
+        font-style: oblique;
+        font-weight: 600;
+    }
+
+    #mission, #team {
+      text-align: center;
+      font-size: 25px;
+      background-color: rgb(255, 250, 245);
+      line-height: 70px;
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #team {
+      background-color: white;
+      flex: 33.33%;
+      padding: 5px;
+    }
+
+    #team1, #team2 {
+      display: flex;
+    }
+
+    #team img {
+        margin-top: 8px;
+        vertical-align: middle;
+    }
+
+    #teamName {
+      margin-top: 1%;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  </style>  
 
 <!-- <% include partials/footer.ejs %> -->
 <app-footer></app-footer>
