@@ -1,0 +1,55 @@
+# Student Name: Farzana Alam
+# Student ID: 301180910
+# Date: Dec 9th, 2022
+
+
+version: 2.1
+jobs:
+  deploy:
+    docker:
+      - image: google/cloud-sdk
+
+    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+    # 2nd step Node.js
+      - run:
+          name: Install Node.js
+          command: |
+            curl -fsSL https://deb.nodesource.com/setup_16.x | bash - &&\
+            apt-get install -y nodejs
+      - run:
+          name: Install Dependencies
+          command: |
+            npm install
+      - run:
+          name: Build Angular app
+          command: |
+            npm run build
+      - run:
+          name: Removes the devDependencies
+          command: |
+            npm prune --production
+      # Make sure to enable on GCP: Cloud Build API, Cloud Resource Manager API, and App Engine Admin API.
+      - run:
+          name: Setup Google Cloud CLI
+          command: |
+            echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account --key-file=-
+            gcloud --quiet config set project comp229018f2022-frontend
+            gcloud --quiet config set compute/zone northamerica-northeast1
+      - run:
+          name: Deploy the app
+          command: |          
+            gcloud app deploy
+# Invoke jobs via workflows
+# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+workflows:
+  setup_deploy: # This is the name of the workflow, need change it to better match  workflow.
+    # Inside the workflow, need to define the jobs to run.
+    jobs:
+      - deploy:
+          filters:
+            branches:
+              only:
+                - main

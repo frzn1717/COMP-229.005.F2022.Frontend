@@ -25,5 +25,5 @@ app.get('*', function(req, res){
 
 // Start the server.
 app.listen(process.env.PORT || 8080, () => {
-    console.log(`====> Angular app is running.`)
+    console.log(`====> Angular app is running.=======`)
 })
