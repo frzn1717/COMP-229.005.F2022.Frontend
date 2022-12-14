@@ -22,10 +22,10 @@ export class ListComponent{
         return this.repository.getInventory();        
     }
 
+
     deleteMethod(id: string) {
         if(confirm("Are you sure do you want to delete?")) {
             this.router.navigateByUrl("inventory/delete/"+id);
         }
-    }
-    
+    }   
 }
