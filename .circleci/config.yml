@@ -25,9 +25,13 @@ jobs:
           command: |
             npm install
       - run:
+          name: Create the envirnment file
+          command: |
+              echo -e "${ENV_FILE}" > ./src/environments/environment.prod.ts
+      - run:
           name: Build Angular app
           command: |
-            npm run build
+            npm run build     
       - run:
           name: Removes the devDependencies
           command: |
